@@ -1,0 +1,79 @@
+<mat-sidenav-container class="example-container"   >
+    <mat-sidenav #sidenav  class="app-sidenav" opened >
+        <mat-toolbar   >
+
+            <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" [hidden]="!sidenav.opened" aria-label="Example icon-button with menu icon">
+    <mat-icon>close</mat-icon>
+  </button>
+
+        </mat-toolbar>
+        <mat-nav-list>
+            <table border="0">
+                <tr>
+                    <div class="" style="padding: 20px !important;">
+                        <a class="ico box" mat-list-item routerLink="./Rdv" routerLinkActive="activeLi" (click)="sidenav.toggle()">
+                            <div class="divb"> <i class=' fas fa-book-open fa-2x'></i></div>
+
+                            <span class="title ml-4" style="padding-left: 10px !important;" md-line> Mes Rendez-Vous</span>
+
+                        </a>
+                    </div>
+                </tr>
+                <tr>
+                    <div style="padding: 20px !important;">
+                        <a class="ico box" mat-list-item routerLink="MSeances" routerLinkActive="activeLi" (click)="sidenav.toggle()">
+                            <div class="divb"> <i class='fas fa-address-book fa-2x'></i></div>
+                            <span class="title ml-3" style="padding-left: 10px !important;" md-line> Mes Fiches personnels</span>
+
+                        </a>
+                    </div>
+                </tr>
+                <tr>
+                    <div style="padding: 20px !important;">
+                        <a class="ico box" routerLink="MDemandes" routerLinkActive="activeLi" mat-list-item (click)="sidenav.toggle()">
+                            <div class="divb"> <i class='fas fa-indent fa-2x'></i></div>
+                            <span class="title ml-3" style="padding-left: 10px !important;" md-line> Mes Factures</span>
+
+                        </a>
+                    </div>
+                </tr>
+                <tr>
+                    <div style="padding: 20px !important;">
+                        <a class="ico box" mat-list-item routerLink="Chercher" routerLinkActive="activeLi" (click)="sidenav.toggle()">
+                            <div class="divb"> <i class='fas fa-archway fa-search fa-2x'></i></div>
+                            <span class="title ml-3" md-line> Chercher</span>
+
+                        </a>
+                    </div>
+                </tr>
+                <tr>
+                    <div style="padding: 20px !important;">
+                        <a class="ico box" mat-list-item routerLink="Paiement" routerLinkActive="activeLi" (click)="sidenav.toggle()">
+                            <div class="divb"> <i class='fas fa-archway fa-credit-card fa-2x'></i></div>
+                            <span class="title ml-3" md-line> Paiement</span>
+                        </a>
+                    </div>
+                </tr>
+            </table>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar class="co" id="appToolbar"   >
+        <button mat-icon-button class="md-icon-button sidenav-toggle-button " (click)="sidenav.toggle() " [hidden]="sidenav.opened " aria-label="Example icon-button with menu icon ">
+      <mat-icon class="material-icons ">menu</mat-icon>
+    </button>
+        <!--<h1 class="component-title ">
+            <img src="../../assets/logo1.png" class="log" width="150">
+        </h1>-->
+        <span class="toolbar-filler "></span>
+        <button routerLink="../identifier/Login" mat-button>Logout</button>
+
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted"> <b>Doctor </b> ©  2021.</span>
+        </div>
+    </footer>
+</mat-sidenav-container>

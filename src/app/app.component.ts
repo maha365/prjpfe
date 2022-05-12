@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+ import { ActivatedRoute, Router } from '@angular/router';
+ import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prjpfe';
+  constructor(private route: ActivatedRoute,
+    private router: Router, private keycloakService: KeycloakService) { }
+    logout() {
+      this.keycloakService.logout();
+      }
 }

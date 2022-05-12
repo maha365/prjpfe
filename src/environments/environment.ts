@@ -3,8 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: true,
+  envName: 'local',
+  keycloak: {
+  issuer: 'http://localhost:8080/auth/',
+  realm: 'Pfe',
+  clientId: 'test1',
+  };
+  }
 
 /*
  * For easier debugging in development mode, you can import the following file
